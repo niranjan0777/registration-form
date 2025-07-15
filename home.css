@@ -1,0 +1,288 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-image: url("/Users/ensalliance/Downloads/Start Project Website with Login and Registration/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+  justify-content: center;
+    
+}
+div{
+    color: white;
+    
+}
+.logo{
+    font-size: 3em;
+    color: white;
+}
+.navigation{
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    margin-left: 500px;
+}
+a{
+    margin-left: 40px;
+    font-size: larger;
+}
+h1,ul,a{
+    display: inline;
+}
+img{
+    height: 40px;
+    width: 40px;
+    padding-left: 20;
+    padding-top: 20;
+    background: none;
+}
+h1{
+    margin:0px;
+}
+ul{
+   margin-left: 50%;
+}
+
+a{
+    color: grey;
+    cursor: pointer;
+}
+a:hover{
+    color:white
+}
+.title{
+    background-color:gray;
+    color: white;
+}
+.container {
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  margin-top: 5%;
+}
+.container .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+
+}
+.container .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.content form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+  color: black;
+}
+form .user-details .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+  border-color: #9b59b6;
+}
+form .gender-details .gender-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+form .category {
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+  justify-content: space-between;
+  color: black;
+}
+form .category label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+form .category label .dot {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+#dot-1:checked~.category label .one,
+#dot-2:checked~.category label .two,
+#dot-3:checked~.category label .three {
+  background: #9b59b6;
+  border-color: #d9d9d9;
+}
+form input[type="radio"] {
+  display: none;
+}
+form .button {
+  height: 45px;
+  margin: 35px 0
+}
+form .button input {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+form .button input:hover {
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+/* Responsive media query code for mobile devices */
+@media(max-width: 584px) {
+  .container {
+    max-width: 100%;
+  }
+  form .user-details .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category {
+    width: 100%;
+  }
+  .content form .user-details {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar {
+    width: 5px;
+  }
+}
+
+@media(max-width: 459px) {
+  .container .content .category {
+    flex-direction: column;
+  }
+}
+.terms {
+  font-size: 14px;
+  margin-top: 10px;
+  color: black;
+  text-align: center;
+  margin-left: 20px;
+}
+
+.conditions,
+.conditiontwo {
+  color:gray;
+  text-decoration: none;
+  margin-left: 0; 
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.conditions:hover,
+.conditiontwo:hover {
+  color: black;
+}
+
+.conditiontwo {
+  margin-left: 5px;
+}
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+.s-box select {
+  margin-bottom: 10px;
+  width: 160%;
+  height: 45px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  border-color: #9b59b6;
+  outline: none;
+  background-color: white;
+  color: #333;
+}
+/* Flexbox row for select and file input */
+.row-box {
+  display: flex;
+  gap: 105px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Match the box styling with others */
+.row-box .input-box {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Style the select like inputs */
+.input-box select {
+  width: 125%;
+  height: 45px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #800080;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Style file input wrapper to look like others */
+.file-wrapper {
+  position: relative;
+  width: 100%;
+  height: 45px;
+}
+
+.file-wrapper input[type="file"] {
+  width: 121%;
+  height: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #800080;
+  border-radius: 5px;
+  outline: none;
+  color: #333;
+  background-color: white;
+  box-sizing: border-box;
+  margin-right: 20%;
+}
